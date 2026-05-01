@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Craftsvilla</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header>
+      <div class="container primary">
+        <h1>Craftsvilla</h1>
+      </div>
+    </header>
+
+    <!-- NAV -->
+
+    <nav>
+      <div class="nav-row">
+        <a href="/index.html">Hjem</a>
+        <a href="/booking.html">Booking</a>
+        <a href="/feedback.html">Tilbakemelding</a>
+        <a href="/gallery.html">Galleri</a>
+      </div>
+    </nav>
+
+    <!-- Main -->
+
+    <main>
+      <section>
+        <div class="container container-form primary">
+          <h2>Vi vil gjerne høre fra deg!</h2>
+          <p>
+            Tilbakemeldingene dine hjelper oss med å gjøre workshopene båre
+            bedre for alle. Del gjerne opplevelsen din med oss!
+          </p>
+          <form>
+            <label for="name">Navn</label>
+            <input
+              type="text"
+              id="name"
+              required
+              minlength="2"
+              maxlength="30"
+              placeholder="Navn"
+            />
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="fornavn@etternavn.no"
+            />
+
+            <label for="workshop">Workshop deltatt på</label>
+            <select name="workshop" id="workshop">
+              <option value="mosaikk">Mosaikk</option>
+              <option value="akvarell">Akvarell</option>
+              <option value="lerret">Lerret</option>
+              <option value="annet">Annet / Flere</option>
+            </select>
+
+            <label for="feedback">Hva likte du best?</label>
+            <textarea
+              name="feedback"
+              id="feedback"
+              minlength="10"
+              maxlength="200"
+              placeholder="Gi oss en tilbakemelding på mellom 10-200 karakterer"
+              rows="10"
+            ></textarea>
+
+            <label for="feedback"
+              >Hvordan kan vi forbedre opplevelsen din?</label
+            >
+            <textarea
+              name="feedback"
+              id="feedback"
+              minlength="10"
+              maxlength="200"
+              placeholder="Gi oss en tilbakemelding på mellom 10-200 karakterer"
+              rows="10"
+            ></textarea>
+
+            <div>
+              <p>Vil du anbefale CRAFTSVILLA til andre?</p>
+
+              <form>
+                <label class="choice-label">
+                  <input type="checkbox" />Ja.
+                </label>
+                <label class="choice-label">
+                  <input type="checkbox" required />Nei
+                </label>
+                <label class="choice-label">
+                  <input type="checkbox" required />Kanskje
+                </label>
+              </form>
+            </div>
+
+            <label class="choice-label">
+              <input type="checkbox" name="checkbox-choice" id="check" />Jeg gir
+              CRAFTSVILLA tillatelse til å dele tilbakemeldingene mine på
+              nettstedet deres eller sosiale medier.
+            </label>
+
+            <label for="file-example">Last opp bildefil </label>
+            <input type="file" id="file-example" />
+          </form>
+          <button type="submit" id="button-form">Send Inn</button>
+
+          <p id="success-message"></p>
+        </div>
+      </section>
+
+      <section class="container container-product secondary">
+        <h2>Tilbakemeldinger fra tidligere deltakere</h2>
+
+        <div class="feedback-row">
+          <div class="feedback-card">
+            <div class="feedback-image">
+              <img src="/img/Pia.jpg" alt="" />
+            </div>
+
+            <div class="feedback-text">
+              <h3>Pia Larsen</h3>
+              <p>Både jeg og barna mine hadde det kjempe gøy!</p>
+            </div>
+          </div>
+
+          <div class="feedback-card">
+            <div class="feedback-image">
+              <img src="/img/mia.jpg" alt="" />
+            </div>
+
+            <div class="feedback-text">
+              <h3>Mia Frogner</h3>
+              <p>Kjempe bra! Var der med flere fra jobb.</p>
+            </div>
+          </div>
+
+          <div class="feedback-card">
+            <div class="feedback-image">
+              <img src="/img/viktor.jpg" alt="" />
+            </div>
+
+            <div class="feedback-text">
+              <h3>Viktor Gunnersen</h3>
+              <p>Veldig lærerikt og flinke veiledere!</p>
+            </div>
+          </div>
+
+          <div class="feedback-card">
+            <div class="feedback-image">
+              <img src="/img/Zara.jpg" alt="" />
+            </div>
+
+            <div class="feedback-text">
+              <h3>Zara Jonsen</h3>
+              <p>Fikk utfordre mine kunstneriske ferdigheter!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="primary">
+      <div class="copyright">
+        <ul>
+          © 2026 Craftvilla
+        </ul>
+      </div>
+      <div class="contact">
+        <ul>
+          E-postadresse: kontakt.oss@craftvilla.no
+        </ul>
+        <ul>
+          Telefonnummer: +47 123 45 678
+        </ul>
+        <ul>
+          Åpningstid: 11:00-20:00
+        </ul>
+        <ul>
+          Addresse: Tilfediggate 10, 6677 Ingenplass
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

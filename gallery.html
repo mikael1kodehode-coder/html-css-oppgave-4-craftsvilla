@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Craftsvilla</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header>
+      <div class="container primary">
+        <h1>Craftsvilla</h1>
+      </div>
+    </header>
+
+    <!-- NAV -->
+
+    <nav>
+      <div class="nav-row">
+        <a href="/index.html">Hjem</a>
+        <a href="/booking.html">Booking</a>
+        <a href="/feedback.html">Tilbakemelding</a>
+        <a href="/gallery.html">Galleri</a>
+      </div>
+    </nav>
+
+    <!-- Main -->
+
+    <section>
+      <!-- Galleri -->
+      <div class="gallery-banner primary">
+        <h2>Galleri</h2>
+      </div>
+
+      <div class="container gallery">
+        <div class="gallery-column">
+          <img
+            src="/img/creative-grp.avif"
+            onclick="
+              openModal();
+              currentSlide(1);
+            "
+            class="hover-shadow"
+            alt="A group working on painting. "
+          />
+        </div>
+
+        <div class="gallery-column">
+          <img
+            src="/img/group of women painting around table.avif"
+            onclick="
+              openModal();
+              currentSlide(2);
+            "
+            class="hover-shadow"
+            alt="Women painting together"
+          />
+        </div>
+
+        <div class="gallery-column">
+          <img
+            src="/img/painting orange.avif"
+            onclick="
+              openModal();
+              currentSlide(3);
+            "
+            class="hover-shadow"
+            alt="Painting an orange"
+          />
+        </div>
+
+        <div class="gallery-column">
+          <img
+            src="/img/woman sitting in art class.avif"
+            onclick="
+              openModal();
+              currentSlide(4);
+            "
+            class="hover-shadow"
+            alt="Woman sitting in art class"
+          />
+        </div>
+
+        <!-- Modal/Lightbox -->
+
+        <div id="galleryModal" class="modal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+            <div class="mySlides">
+              <div class="numbertext">1/4</div>
+              <img src="/img/creative-grp.avif" style="width: 100%" />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">2/4</div>
+              <img
+                src="/img/group of women painting around table.avif"
+                style="width: 100%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">3/4</div>
+              <img src="/img/painting orange.avif" style="width: 100%" />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4/4</div>
+              <img
+                src="/img/woman sitting in art class.avif"
+                style="width: 100%"
+              />
+            </div>
+
+            <!-- Neste/Forrige -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption -->
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail bilde kontroll -->
+            <div class="column">
+              <img
+                class="demo"
+                src="/img/creative-grp.avif"
+                onclick="currentSlide(1)"
+                alt="A group working on painting."
+              />
+            </div>
+            <div class="column">
+              <img
+                class="demo"
+                src="/img/group of women painting around table.avif"
+                onclick="currentSlide(2)"
+                alt="Women painting together"
+              />
+            </div>
+            <div class="column">
+              <img
+                class="demo"
+                src="/img/painting orange.avif"
+                onclick="currentSlide(3)"
+                alt="Painting an orange"
+              />
+            </div>
+            <div class="column">
+              <img
+                class="demo"
+                src="/img/woman sitting in art class.avif"
+                onclick="currentSlide(4)"
+                alt="Woman sitting in art class"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="primary">
+      <div class="copyright">
+        <ul>
+          © 2026 Craftvilla
+        </ul>
+      </div>
+      <div class="contact">
+        <ul>
+          E-postadresse: kontakt.oss@craftvilla.no
+        </ul>
+        <ul>
+          Telefonnummer: +47 123 45 678
+        </ul>
+        <ul>
+          Åpningstid: 11:00-20:00
+        </ul>
+        <ul>
+          Addresse: Tilfediggate 10, 6677 Ingenplass
+        </ul>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    // Åpne modal
+    function openModal() {
+      document.getElementById("galleryModal").style.display = "block";
+    }
+
+    // Steng modal
+    function closeModal() {
+      document.getElementById("galleryModal").style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Neste/forrige kontroll
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    // Thumbnail bilde kontroll
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+  </script>
+</html>

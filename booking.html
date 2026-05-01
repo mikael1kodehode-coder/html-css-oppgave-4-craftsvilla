@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Craftvilla</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header>
+      <div class="container primary">
+        <h1>Craftsvilla</h1>
+      </div>
+    </header>
+
+    <!-- NAV -->
+
+    <nav>
+      <div class="nav-row">
+        <a href="/index.html">Hjem</a>
+        <a href="/booking.html">Booking</a>
+        <a href="/feedback.html">Tilbakemelding</a>
+        <a href="/gallery.html">Galleri</a>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main>
+      <!-- Produkter -->
+
+      <section class="container container-product primary">
+        <h2>Tilgjengelige kunstformer og sett</h2>
+
+        <div class="product-row">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/product-card/product-image-1.jpg" alt="" />
+            </div>
+
+            <div class="product-text">
+              <h3>Mosaikk Kunst</h3>
+              <p>
+                Sett inkluderer: Ramme, A4 størrelse treplate, små fargede
+                steiner, gummi.
+              </p>
+              <p>400 kr</p>
+            </div>
+
+            <div class="product-button">
+              <a href="/booking.html" class="button primary">Kjøp nå</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/product-card/product-image-2.jpg" alt="" />
+            </div>
+
+            <div class="product-text">
+              <h3>Akvarellmaling</h3>
+              <p>
+                Sett inkluderer: Ramme, akvarellpapir med designmal,
+                akvarellfarger, pensler.
+              </p>
+              <p>200 kr</p>
+            </div>
+
+            <div class="product-button">
+              <a href="/booking.html" class="button primary">Kjøp nå</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/product-card/product-image-3.jpg" alt="" />
+            </div>
+
+            <div class="product-text">
+              <h3>Lerretsmaling</h3>
+              <p>
+                Sett inkluderer: Ramme, akrylpapir med designmal, akrylfarger,
+                pensler.
+              </p>
+              <p>300 kr</p>
+            </div>
+
+            <div class="product-button">
+              <a href="/booking.html" class="button primary">Kjøp nå</a>
+            </div>
+          </div>
+        </div>
+        <p>(Merk: Flere kunstformer vil bli introdusert i fermtiden)</p>
+      </section>
+
+      <section>
+        <div class="container container-form secondary">
+          <h2>Bestillingsskjema</h2>
+
+          <form id="complete-form">
+            <label for="first-name">Fornavn</label>
+            <input
+              type="text"
+              id="first-name"
+              required
+              minlength="2"
+              maxlength="20"
+              placeholder="Fornavn"
+            />
+
+            <label for="last-name">Etternavn</label>
+            <input
+              type="text"
+              id="last-name"
+              required
+              minlength="2"
+              maxlength="20"
+              placeholder="Etternavn"
+            />
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="fornavn@etternavn.no"
+            />
+
+            <label for="phone">Phone number</label>
+            <input
+              type="tel"
+              id="phone"
+              pattern="[0-9]{8}"
+              placeholder="12345678"
+            />
+
+            <label for="workshop">Velg Workshop</label>
+            <select name="workshop" id="workshop">
+              <option value="mosaikk">Mosaikk</option>
+              <option value="akvarell">Akvarell</option>
+              <option value="lerret">Lerret</option>
+            </select>
+
+            <!-- Date -->
+            <label for="date-example">Dato</label>
+            <input type="date" id="date-example" />
+
+            <!-- Time -->
+            <label for="time-example">Tidspunkt</label>
+            <input type="time" id="time-example" />
+
+            <!-- Number -->
+            <label for="number-example">Antall</label>
+            <input
+              type="number"
+              id="number-example"
+              pattern="[0-9]{2}"
+              placeholder="1"
+            />
+
+            <label for="message">Spesielle ønsker</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="4"
+              placeholder="Skriv dine ønsker her"
+            ></textarea>
+          </form>
+
+          <button type="submit" id="button-form1">Send Inn</button>
+
+          <p id="success-message"></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="primary">
+      <div class="copyright">
+        <ul>
+          © 2026 Craftvilla
+        </ul>
+      </div>
+      <div class="contact">
+        <ul>
+          E-postadresse: kontakt.oss@craftvilla.no
+        </ul>
+        <ul>
+          Telefonnummer: +47 123 45 678
+        </ul>
+        <ul>
+          Åpningstid: 11:00-20:00
+        </ul>
+        <ul>
+          Addresse: Tilfediggate 10, 6677 Ingenplass
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

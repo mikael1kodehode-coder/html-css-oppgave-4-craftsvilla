@@ -1,0 +1,505 @@
+/* Basic Styling */
+
+:root {
+  /* Colors */
+  --primary-color: #c95a3c;
+  --secondary-color: #9fbf9a;
+  --accent-color: ;
+  --light-bg: #fff8f2;
+  --text-color-light: #fff8f2;
+  --text-color-dark: #655043;
+
+  /* Spacing */
+  --space-small: 0.5rem;
+  --space-medium: 1rem;
+  --space-large: 2rem;
+  --space-xl: 2.5rem;
+  --space-section: 3.75rem;
+
+  /* Font sizes */
+  --text-small: 0.875rem;
+  --text-base: 1rem;
+  --text-medium: 1.25rem;
+  --text-large: 1.875rem;
+  --text-xl: 2.5rem;
+
+  /* Other */
+  --radius: 0.625rem;
+}
+
+/* Global */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--light-bg);
+  display: flex;
+  line-height: 1.5;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.container-swap {
+  display: flex;
+  justify-content: center;
+
+  width: 90%;
+  max-width: 1000px;
+
+  gap: 10%;
+
+  /* margin-top: 10px; */
+  margin: 0 auto;
+  margin-top: 10px;
+}
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 300px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header */
+
+header {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  padding: var(--space-medium);
+}
+
+header h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 38px;
+}
+
+nav {
+  background-color: var(--light-bg);
+  padding: var(--space-small) 0;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: var(--primary-color);
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-row {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-large);
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+
+.button,
+button {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--text-color-dark);
+  padding: 0.75rem 1.125rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: var(--text-base);
+  margin: 10px;
+}
+
+#button-form1 {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+}
+
+.button-hero {
+  background-color: var(--secondary-color);
+  color: var(--text-color-dark);
+  margin-left: -100px;
+}
+
+.button-hero a {
+  color: var(--text-color-dark);
+}
+
+.hero {
+  background-image: url(/img/creative-grp.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: flex-end;
+
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1000px;
+  aspect-ratio: 1215 / 671;
+}
+
+.hero p {
+  background-color: var(--primary-color);
+  color: var(--light-bg);
+  max-width: 499px;
+  padding: 1rem;
+
+  font-size: var(--text-large);
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container-text {
+  margin: 10px;
+  margin-left: 45px;
+}
+.container-text p {
+  margin-top: 10px;
+  font-size: var(--text-medium);
+  font-family: "rubik";
+}
+
+.container-text li {
+  margin-top: 10px;
+  font-size: var(--text-medium);
+  font-family: "rubik";
+}
+
+.container-text h2 {
+  font-size: var(--text-large);
+  font-family: "Montserrat" sans-serif;
+}
+
+#om-oss-image {
+  width: 411px;
+  height: 274px;
+  padding: 10px;
+}
+
+.primary {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+}
+
+.secondary {
+  background-color: var(--secondary-color);
+  color: var(--text-color-dark);
+  font-family: "rubik" sans-serif;
+  /* gap: 219px; */
+}
+
+.container-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  contain: content;
+}
+
+.container-product h2 {
+  margin-top: 10px;
+  font-size: var(--text-large);
+  font-family: "Montserrat" sans-serif;
+}
+
+.product-row {
+  margin-top: var(space-large);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  min-height: 362px;
+  max-width: 225px;
+  gap: 27px;
+  background-color: var(--secondary-color);
+
+  margin: 10px;
+  padding: 20px;
+}
+
+.product-card h3 {
+  margin-top: 10px;
+}
+
+.product-card p {
+  margin-top: 10px;
+  font-size: var(--text-medium);
+}
+
+.product-button {
+  margin-top: 27px;
+}
+
+.product-card img {
+  width: 163px;
+  height: 122px;
+}
+
+.feedback-row {
+  margin-top: var(space-large);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}
+
+.feedback-card {
+  background-color: var(--primary-color);
+  color: var(--light-bg);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  width: 100%;
+  height: 350px;
+
+  margin: 10px;
+  padding: 20px;
+}
+
+.feedback-card h3 {
+  flex: 1;
+}
+
+.feedback-card p {
+  flex: 1;
+  margin-top: 10px;
+  font-size: var(--text-small);
+}
+
+.feedback-button {
+  margin-top: 27px;
+}
+
+.feedback img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+#fordeler-image {
+  width: 411px;
+  height: 274px;
+  padding: 10px;
+}
+
+/* Gallery */
+
+.gallery-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.gallery img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 75%;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Column */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Modal bakgrunn */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+.modal img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Stenge knappen */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Gjemme slides */
+.mySlides {
+  display: none;
+}
+
+/* Neste / Forrige knapp */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Posisjonere "neste" knappen til høyre */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Gjennomsiktig på hover */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Nummer tekst (1/4) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption tekst */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
