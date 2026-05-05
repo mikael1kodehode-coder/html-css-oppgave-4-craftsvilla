@@ -408,7 +408,7 @@ button {
 
 .gallery img {
   height: 200px;
-  width: 100%;
+  width: 300px;
   object-fit: cover;
 }
 
@@ -550,5 +550,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 75%;
+
+  font-size: var(--text-small);
   margin-top: 10px;
 }
